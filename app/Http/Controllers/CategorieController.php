@@ -12,7 +12,7 @@ class CategorieController extends Controller
      */
     public function index()
     {
-        $categories = Categorie::paginate(5);
+        $categories = Categorie::paginate(7);
         return view("categories.index", compact('categories'));
     }
 
@@ -85,6 +85,6 @@ class CategorieController extends Controller
     public function destroy(string $id)
     {
         Categorie::find($id)->delete();
-        return redirect('categories')->with('message', "La catégorie a bien été supprimée !");
+        return redirect('categories')->with('message', "La catégorie $id a bien été supprimée !");
     }
 }

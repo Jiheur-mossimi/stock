@@ -254,7 +254,9 @@
     "Edit a category": "Modifier une catégorie",
     "Last update": "Dernière modification",
     "Date creation": "Date de création",
-    "Show a category": "Voir une catégorie",
+    "Show a category": "Voir les details d'une catégorie",
     "Categories List": "Liste des catégories",
-    "Products List": "Liste des produits"
+    "Products List": "Liste des produits",
+    "Edit a product": "Modifier un produit",
+    "Show a product": "Voir les details d'un produit"
 }

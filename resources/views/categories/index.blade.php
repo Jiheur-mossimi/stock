@@ -47,12 +47,12 @@
                                     <x-link-button href="{{ route('categories.show', $categorie->id) }}">
                                         @lang('Show')
                                     </x-link-button>
-                                    <x-link-button href="{{ route('categories.edit', $categorie->id) }}">
+                                    <x-link-button-warning href="{{ route('categories.edit', $categorie->id) }}">
                                         @lang('Edit')
-                                    </x-link-button>
-                                    <x-link-button onclick="event.preventDefault(); document.getElementById('destroy{{ $categorie->id }}').submit();">
+                                    </x-link-button-warning>
+                                    <x-link-button-danger onclick="event.preventDefault(); document.getElementById('destroy{{ $categorie->id }}').submit();">
                                         @lang('Delete')
-                                    </x-link-button>
+                                    </x-link-button-danger>
                                     <form id="destroy{{ $categorie->id }}" action="{{ route('categories.destroy', $categorie->id) }}" method="POST" style="display: none;">
                                         @csrf
                                         @method('DELETE')

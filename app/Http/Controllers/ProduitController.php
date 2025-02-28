@@ -55,7 +55,8 @@ class ProduitController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $produit = Produit::find($id);
+        return view('produits.show', compact('produit'));
     }
 
     /**
@@ -63,7 +64,9 @@ class ProduitController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $produit = Produit::find($id);
+        $categories = Categorie::all();
+        return view('produits.edit', compact('produit','categories'));
     }
 
     /**
@@ -71,7 +74,22 @@ class ProduitController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->validate([
+            'reference' => 'required|max:10',
+            'libelle' => 'required|max:100',
+            'quantite' => 'required',
+            'prix' => 'required',
+            'categorie_id' => 'required'
+        ]);
+
+        $p = Produit::find($id);
+        $p->reference = $request->reference;
+        $p->libelle = $request->libelle;
+        $p->quantite = $request->quantite;
+        $p->prix = $request->prix;
+        $p->categorie_id = $request->categorie_id;
+        $p->save();
+        return redirect('produits')->with('message', "Le produit a bien été modifié !");
     }
 
     /**

@@ -19,14 +19,14 @@
 
                 <!-- Lien pour la liste des catégories -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.index')">
+                    <x-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.index', 'categories.edit', 'categories.show')">
                         {{ __('Categories List') }}
                     </x-nav-link>
                 </div>
 
                 <!-- Lien pour la liste des produits -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('produits.index')" :active="request()->routeIs('produits.index')">
+                    <x-nav-link :href="route('produits.index')" :active="request()->routeIs('produits.index', 'produits.edit', 'produits.show')">
                         {{ __('Products List') }}
                     </x-nav-link>
                 </div>
@@ -87,13 +87,13 @@
         </div>
 
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.index')">
+            <x-responsive-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.index', 'categories.edit', 'categories.show')">
                 {{ __('Categories') }}
             </x-responsive-nav-link>
         </div>
 
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('produits.index')" :active="request()->routeIs('produits.index')">
+            <x-responsive-nav-link :href="route('produits.index')" :active="request()->routeIs('produits.index', 'produits.edit', 'produits.show')">
                 {{ __('Produits') }}
             </x-responsive-nav-link>
         </div>

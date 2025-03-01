@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <x-categories-card>
+    <x-produits-card>
 
         <!-- Message de réussite -->
         @if (session()->has('message'))
@@ -81,5 +81,5 @@
             </div>
         </form>
 
-    </x-categories-card>
+    </x-produits-card>
 </x-app-layout>

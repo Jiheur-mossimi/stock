@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <x-categories-card>
+    <x-produits-card>
         <h3 class="font-semibold text-xl text-gray-800">@lang('Réference')</h3>
         <p> {{ $produit->reference }} </p>
 
@@ -32,5 +32,5 @@
             <p> {{ $produit->updated_at->format('d/m/Y') }} </p>
         @endif
 
-    </x-categories-card>
+    </x-produits-card>
 </x-app-layout>

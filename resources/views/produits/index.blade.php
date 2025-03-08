@@ -25,7 +25,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="px-2 py-2 text-xs text-gray-500">#</th>
+                                <th class="px-2 py-2 text-xs text-gray-500">N#</th>
                                 <th class="px-2 py-2 text-xs text-gray-500">Réference</th>
                                 <th class="px-2 py-2 text-xs text-gray-500">Libelle</th>
                                 <th class="px-2 py-2 text-xs text-gray-500">Prix</th>
